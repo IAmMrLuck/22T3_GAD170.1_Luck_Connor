@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace WriteYourNameHere
+namespace ConnorLuck
 {
     /// <summary>
     /// This class holds functionality for scene transition and reloading this scene to restart the game.

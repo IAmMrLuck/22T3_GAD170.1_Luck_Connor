@@ -715,7 +715,7 @@ MonoBehaviour:
   rbody2D: {fileID: 0}
   runSpeed: 3
   jumpStrength: 5
---- !u!114 &6252037541015276310
+--- !u!114 &6252037541015276315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -724,11 +724,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6252037541015276304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea67fc26813f5e439d7f50c047bb06e, type: 3}
+  m_Script: {fileID: 11500000, guid: aa9ee9bbe453490489143113da86edf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInputValue: 0
-  spriteRenderer: {fileID: 0}
-  rbody2D: {fileID: 0}
-  runSpeed: 3
-  jumpStrength: 5
+  currentXp: 0
+  currentLevel: 0
+  levelThreshhold: 0

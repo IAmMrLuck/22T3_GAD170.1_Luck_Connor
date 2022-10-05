@@ -37,7 +37,6 @@ namespace WriteYourNameHere
                 rbody2D.velocity = Vector2.up * jumpStrength;
             }
 
-
             // TODO Movement Final: Add code comments describing what you hope your code is doing throughout this script.
 
             // TODO Movement Bonus 1: Ensure that our character can only jump if they are "grounded". (Hint: You can use a boolean as a part of this!)
