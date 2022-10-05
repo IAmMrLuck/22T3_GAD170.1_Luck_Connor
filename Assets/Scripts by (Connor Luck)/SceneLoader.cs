@@ -11,7 +11,7 @@ namespace WriteYourNameHere
     public class SceneLoader : MonoBehaviour
     {
         // TODO Loader 1/4: Declare a string variable for the name of the scene we want to load, which is this scene. (Write in the scene's name in Unity's Inspector.)
-        [SerializeField] private string ;
+        [SerializeField] private string sceneOne;
 
         private void LoadScene()
         {
