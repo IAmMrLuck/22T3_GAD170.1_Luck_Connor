@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace WriteYourNameHere
+namespace Connor
 {
     /// <summary>
     /// This class holds all the variables and functionality for moving our character around our game world.
@@ -36,10 +36,43 @@ namespace WriteYourNameHere
             {
                 rbody2D.velocity = Vector2.up * jumpStrength;
             }
+ private void Update()
+        {
+            horizontalMovementValue = Input.GetAxisRaw("Horizontal");
+            transform.position += Time.deltaTime * runSpeed * new Vector3(horizontalMovementValue, 0);
+            
+            if (isGrounded && Input.GetButtonDown("Jump"))
+            {
+            rbody2D.velocity = new Vector3(rbody2D.velocity.x, jumpStrength);
+                }
+                if (isGrounded && Input.GetButtonDown("Jump"))
+                    {
+                        isJumpButtonHeld = true;
+                        animator.SetBool("IsJumping", true);
+                        isGrounded = false;
 
-            // TODO Movement Final: Add code comments describing what you hope your code is doing throughout this script.
+                        rbody2D.velocity = new Vector3(rbody2D.velocity.x, jumpStrength);
+                    }
+                if (Input.GetButtonUp("Jump"))
+                    {
+                        isJumpButtonHeld = false;
+            }
+          private void FixedUpdate()
+        {
+          
+            if (Physics2D.OverlapCircle(transform.position, 0.1f, groundLayerMask))
+            {
+                isGrounded = true;
 
-            // TODO Movement Bonus 1: Ensure that our character can only jump if they are "grounded". (Hint: You can use a boolean as a part of this!)
+            if (!isJumpButtonHeld)
+                {
+                    animator.SetBool("IsJumping", false);
+                }
+            
+            else
+                
+                    isGrounded = false;
+     
 
             // TODO Movement Bonus 2: Flip our character's sprite so that it faces left/right if we are moving left/right. (Hint: A SpriteRenderer reference, and changing its FlipX = true/false will help!)
 
