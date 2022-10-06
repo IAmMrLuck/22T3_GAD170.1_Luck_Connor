@@ -22,8 +22,10 @@ namespace ConnorLuck
         private void OnTriggerEnter2D(Collider2D collision)
         {
             // TODO Loader 3/4: Call your load scene method to load this same scene again (effectively restarting the game).
+            SceneManager.LoadScene("sceneOne");
 
             // TODO Loader 4/4: Add this script to a gameobject so that it can restart the game when collided with. (A flag might be good!)
+            
 
             // TODO Loader Final: Add code comments describing what you hope your code is doing throughout this script.
 
