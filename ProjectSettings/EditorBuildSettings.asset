@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Temp_Checker.unity
     guid: 0ad85761e7f910f40b3e36bd6d245e89
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Title.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
