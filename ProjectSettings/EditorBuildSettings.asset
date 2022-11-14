@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Temp_Checker.unity
     guid: 0ad85761e7f910f40b3e36bd6d245e89
   - enabled: 1

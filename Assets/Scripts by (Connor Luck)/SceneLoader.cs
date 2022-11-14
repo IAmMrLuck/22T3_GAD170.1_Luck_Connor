@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+// FINISHED - 15/11/22
 namespace ConnorLuck
 {
     /// <summary>
@@ -11,21 +11,34 @@ namespace ConnorLuck
     public class SceneLoader : MonoBehaviour
     {
         // TODO Loader 1/4: Declare a string variable for the name of the scene we want to load, which is this scene. (Write in the scene's name in Unity's Inspector.)
-        [SerializeField] private string sceneOne;
 
-        private void LoadScene()
+        public static SceneLoader Instance;
+
+        private void Awake()
+
         {
-            // TODO Loader 2/4: Call Unity's "SceneManager.LoadScene" method and pass in your scene name variable to its parameters�within the parentheses ( ).
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+
+            else if (Instance != this)
+
+            {
+                Destroy(gameObject);
+            }
 
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            // TODO Loader 3/4: Call your load scene method to load this same scene again (effectively restarting the game).
-            SceneManager.LoadScene("sceneOne");
+        public void sceneToMoveTo()
 
-            // TODO Loader 4/4: Add this script to a gameobject so that it can restart the game when collided with. (A flag might be good!)
-            
+        {
+            SceneManager.LoadScene("Platformer (The Pipeworks)");
+
+        }
+
+        
+
 
             // TODO Loader Final: Add code comments describing what you hope your code is doing throughout this script.
 
@@ -33,6 +46,6 @@ namespace ConnorLuck
 
             // TODO Loader Bonus 2: Add a reference to your second scene (or any scenes you want) so that a second (or more) level can be loaded!
 
-        }
+        
     }
 }

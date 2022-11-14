@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-
-namespace Connor
+using UnityEngine.SceneManagement;
+//FINISHED - 15/11/22
+namespace ConnorLuck
 {
     /// <summary>
     /// This class holds all the variables and functionality for moving our character around our game world.
@@ -73,5 +74,16 @@ namespace Connor
             return raycastHit.collider != null;
             // i found that this was the way to it, but i didn't understand this 
         }
+
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+
+            if (collision.gameObject.tag == "SceneTransition")
+            {
+                SceneLoader.Instance.sceneToMoveTo();
+            }
+
+        }
+
     }
 }
